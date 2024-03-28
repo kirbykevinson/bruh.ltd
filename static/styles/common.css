@@ -5,6 +5,19 @@
     min-width: 0;
 }
 
+[hidden] {
+    display: none !important;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
 .secret-link {
     cursor: inherit !important;
     text-decoration: inherit !important;

@@ -114,11 +114,15 @@ title: "Guess the color"
     <div>
         <h1>Guess the color</h1>
 
-        <div id="color"></div>
+        <div id="color">
+            <span class="visually-hidden">Pretend you can see a color
+            here</span>
+        </div>
 
-        <div id="status"></div>
+        <div id="status" aria-live="polite"></div>
     </div>
 
+    <label for="guess" class="visually-hidden">Your guess</label>
     <input type="text" id="guess" placeholder="ENTER HERE" autocomplete="off">
 </div>
 

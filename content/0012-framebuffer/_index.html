@@ -133,7 +133,13 @@ title: "Framebuffer distortion experiment"
 
 <div class="page-wrapper">
     <div id="original">
-        <canvas width="0" height="0"></canvas>
+        <canvas
+            width="0"
+            height="0"
+
+            role="img"
+            aria-label="Original framebuffer"
+        ></canvas>
 
         <div class="controls">
             <span class="width"></span>
@@ -143,12 +149,20 @@ title: "Framebuffer distortion experiment"
     </div>
 
     <div id="distorted">
-        <canvas width="0" height="0"></canvas>
+        <canvas
+            width="0"
+            height="0"
+
+            role="img"
+            aria-label="Distorted framebuffer"
+        ></canvas>
 
         <div class="controls">
-            <input type="number" class="width" min="0" value="0">
+            <label for="width" class="visually-hidden">Width</label>
+            <input type="number" class="width" id="width" min="0" value="0">
             x
-            <input type="number" class="height" min="0" value="0">
+            <label for="height" class="visually-hidden">Height</label>
+            <input type="number" class="height" id="height" min="0" value="0">
         </div>
     </div>
 </div>

@@ -62,7 +62,12 @@ title: "Weather"
     .secret-link-container {
         float: right;
         cursor: default;
-        opacity: 0;
+    }
+
+    .secret-link {
+        display: block;
+        width: 1em;
+        height: 2em;
     }
 
     #place {
@@ -172,7 +177,9 @@ title: "Weather"
 
 <div class="page-wrapper">
     <div class="secret-link-container">
-        {{% secret-link "/0017-subpixels/" %}}→{{% /secret-link %}}
+        {{% secret-link "/0017-subpixels/" %}}
+            <span class="visually-hidden">There's no link here</span>
+        {{% /secret-link %}}
     </div>
 
     <div id="placeholder">Loading the weather...</div>
@@ -190,7 +197,7 @@ title: "Weather"
             </div>
         </div>
 
-        <iframe id="map"></iframe>
+        <iframe id="map" title="City on the map"></iframe>
 
         <p>Weather data courtesy of <a href="https://wttr.in/">wttr.in</a>.</p>
     </div>

@@ -27,7 +27,12 @@ title: "Pedometer"
     .secret-link-container {
         float: right;
         cursor: default;
-        opacity: 0;
+    }
+
+    .secret-link {
+        display: block;
+        width: 1em;
+        height: 2em;
     }
 </style>
 
@@ -92,12 +97,17 @@ title: "Pedometer"
 <form id="form">
     <h2>Choose a person</h2>
 
-    <p><select id="switcher" disabled>
-        <option value="Pedometer">There's no choice</option>
-    </select></p>
+    <p>
+        <label for="switcher" class="visually-hidden">Person</label>
+        <select id="switcher" disabled>
+            <option value="Pedometer">There's no choice</option>
+        </select>
+    </p>
 
     <div class="secret-link-container">
-        {{% secret-link "/0019-discord-username/" %}}→{{% /secret-link %}}
+        {{% secret-link "/0019-discord-username/" %}}
+            <span class="visually-hidden">Not a link</span>
+        {{% /secret-link %}}
     </div>
 
     <p><button>Show data</button></p>

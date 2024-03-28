@@ -169,9 +169,13 @@ title: "Oklab"
     }
 </script>
 
-<p><input id="picker" type="file" accept="image/*" autocomplete="off"></p>
+<p>
+    <label for="picker" class="visually-hidden">File to process</label>
+    <input id="picker" type="file" accept="image/*" autocomplete="off">
+</p>
 
 <p>
+    <label for="channel" class="visually-hidden">Processing type</label>
     <select id="channel">
         <option value="L">L only</option>
         <option value="a">a only</option>
@@ -187,6 +191,10 @@ title: "Oklab"
 <p id="loading" hidden>Processing the image...</p>
 <p><a id="download" download hidden>Download</a></p>
 
-<canvas id="canvas">There should be a canvas here.</canvas>
+<canvas
+    id="canvas"
+    role="img"
+    aria-label="Processed image"
+></canvas>
 
 <p id="next-page" hidden><a href="/0037-spinning-rat/">Next page</a></p>

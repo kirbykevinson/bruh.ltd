@@ -59,7 +59,12 @@ title: "UTM URL builder"
         bottom: 0;
         left: 0;
         cursor: default;
-        opacity: 0;
+    }
+
+    .secret-link {
+        display: block;
+        width: 5em;
+        height: 1em;
     }
 </style>
 
@@ -153,5 +158,8 @@ title: "UTM URL builder"
 </div>
 
 <div class="secret-link-container">
-    {{% secret-link "/0015-cow-gateway/" %}}secret link{{% /secret-link %}}
+    {{% secret-link "/0015-cow-gateway/" %}}
+        <span class="visually-hidden">Suspicious link in the corner of the
+        screen</span>
+    {{% /secret-link %}}
 </div>
