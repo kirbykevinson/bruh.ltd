@@ -3,29 +3,18 @@ title: "Email? What?"
 ---
 
 <style>
-    @font-face {
-        src:
-            local("Source Serif Pro"),
-            url("/fonts/source-serif-pro.woff2");
-        font-family: "Source Serif Pro";
-        font-display: swap;
-    }
-
     :root {
         --background-image: #3F4FFF url("clouds.png");
         --background-color: #F0F0E0DF;
         --foreground-color: #000000;
     }
+
     @media (prefers-color-scheme: dark) {
         :root {
             --background-image: #070F1F url("clouds-at-night.png");
             --background-color: #1F1F1FDF;
             --foreground-color: #FFFFFF;
         }
-    }
-
-    *, *::before, *::after {
-        box-sizing: border-box;
     }
 
     * {
@@ -47,7 +36,7 @@ title: "Email? What?"
         padding: 0;
         margin: 0;
         line-height: 1.25;
-        font-family: "Source Serif Pro", serif;
+        font-family: serif;
         font-size: 30pt;
         font-style: italic;
         color: var(--foreground-color);
